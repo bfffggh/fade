@@ -9,7 +9,7 @@ FadeTime := (FadeTime *1000)											; converts to milliseconds
 	Gui, Bkg: Add, Picture,, HBITMAP:%hBM%													; adds original greyscale bitmap of background?
 	Gui, Bkg: Add, Picture,xp yp wp hp BackgroundTrans, HBITMAP:%hFG%						; adds the one which I presume fades?
 	Gui, Bkg: Show, x%X% y%Y% w%W% h%H% Hide, BackgroundBitmap								; initially hidden
-	DllCall("AnimateWindow", "Ptr", BackgroundBitmap, "Int", FadeTime, "Int", 0xA0000)		; 4000ms fade time matches XP
+	DllCall("AnimateWindow", "Ptr", BackgroundBitmap, "Int", FadeTime, "Int", 0xA0000)
 return
 
 FsGrayscale(ByRef X1:=0, ByRef Y1:=0, ByRef X2:=0, ByRef Y2:=0, ByRef W:=0, ByRef H:=0)		; makes greyscale screenshot
